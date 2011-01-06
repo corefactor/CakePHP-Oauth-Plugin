@@ -27,6 +27,28 @@ Class OauthToken extends OauthAppModel {
 		
 	}
 	
+	/**
+	 * Revokes tokens based on service and user_id
+	 *
+	 * @param string $service_name 
+	 * @param int $user_id 
+	 * @return bol
+	 * @author Rui Cruz
+	 */
+	public function deauthorize($service_name, $user_id) {
+		
+		$token = $this->findTokenByUserId($service_name, $user_id);
+		
+		if (!empty($token)) {
+			
+			return $this->delete($token[ $this->alias ]['id']);
+			
+		}
+		
+		return false;
+		
+	}
+	
 	public function save($data) {
 		
 		if (isset($data[ $this->alias ])) {
