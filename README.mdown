@@ -1,0 +1,18 @@
+# CakePHP Oauth Plugin
+
+CakePHP Oauth Plugin provides an easy way to use connect to several online applications using OAuth.
+
+## Dependencies
+
+* HttpSocketOauth by neilcrookes available on github also. 
+* http://www.neilcrookes.com/2010/04/12/cakephp-oauth-extension-to-httpsocket/
+* http://github.com/neilcrookes/http_socket_oauth
+
+
+## Installation
+
+* Clone/Copy the files in this directory into `app/plugins/oauth`
+
+## Documentation
+
+Coming soon
