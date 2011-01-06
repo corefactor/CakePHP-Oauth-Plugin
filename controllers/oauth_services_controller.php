@@ -2,8 +2,7 @@
 
 Class OauthServicesController extends OauthAppController {
 
-	var $uses = array();
-	
+	var $uses = array('Oauth.OauthToken');	
 	
 	function beforeFilter() {
 
@@ -93,6 +92,7 @@ Class OauthServicesController extends OauthAppController {
 	protected function afterCallback($service = null, $response = null) {
 
 		# extend to redirect after callback is done
+		#$this->log($response, 'oauth');
 		
 	}
 
