@@ -6,8 +6,8 @@ Class OauthToken extends OauthAppModel {
 	public function findTokenByUserId($service_name, $user_id) {
 		
 		$conditions = array(
-			'OauthToken.service_name' => 'twitter',
-			'OauthToken.user_id' => $response['user_id']
+			'OauthToken.service_name' => $service_name,
+			'OauthToken.user_id' => $user_id
 		);
 		
 		$this->recursive = -1;
@@ -18,8 +18,8 @@ Class OauthToken extends OauthAppModel {
 	public function findTokenByServiceUserId($service_name, $service_user_id) {
 		
 		$conditions = array(
-			'OauthToken.service_name' => 'twitter',
-			'OauthToken.service_user_id' => $response['user_id']
+			'OauthToken.service_name' => $service_name,
+			'OauthToken.service_user_id' => $service_user_id
 		);
 		
 		$this->recursive = -1;
