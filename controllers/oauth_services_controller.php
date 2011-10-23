@@ -30,7 +30,7 @@ Class OauthServicesController extends OauthAppController {
 			'method' => 'GET',
 			'auth' => array(
 				'method' => 'OAuth',
-				'oauth_callback' => 'http://' . $_SERVER['SERVER_NAME'] . Router::url(Configure::read("$service.callback_url")),
+				'oauth_callback' => Router::url(Configure::read("$service.callback_url"), true),
 				'oauth_consumer_key' => Configure::read("$service.consumer_key"),
 				'oauth_consumer_secret' => Configure::read("$service.consumer_secret"),
 			),
